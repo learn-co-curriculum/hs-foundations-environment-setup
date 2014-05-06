@@ -1,3 +1,8 @@
+---
+tags: setup, environment, bash, kids
+languages: ruby
+---
+
 ## Environment Setup
 
 Let's go ahead and get your environment setup. Don't worry too much about the how's and why's of all of this. No one sets up a programming environment all the time, so a lot of people are confused about this anyway. Our goal is to get you up and running as fast as possible!
