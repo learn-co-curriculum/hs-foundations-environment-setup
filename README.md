@@ -19,7 +19,7 @@ We're going to use the standard [Flatiron School Bash Profile](https://github.co
 ##2. Go to the App Store and download XCode.
 It's a free application that we have to download before anything else. Once Xcode is installed, open it, then in the menu bar click on Xcode > preferences, then select Downloads. Download the command line tools. 
 
-If you are using using OS 10.9(Mavericks) or above, you need to download the command line tools from Apples developer webiste, or if you don't have an Apple developer account, you can download the command line tools [here](http://flatiron-school.s3.amazonaws.com/software/command_line_tools_os_x_mavericks_for_xcode__late_october_2013.dmg).
+If you are using using OS 10.9(Mavericks) or above, you need to download the command line tools from Apples developer website, or if you don't have an Apple developer account, you can download the command line tools [here](http://flatiron-school.s3.amazonaws.com/software/command_line_tools_os_x_mavericks_for_xcode__late_october_2013.dmg).
 
 To test and see if you installed command line tools correctly, type `gcc` into terminal.
 If you see output like this you installed it correctly.
