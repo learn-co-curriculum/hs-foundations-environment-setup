@@ -66,7 +66,7 @@ brew install bash-completion
 ##7. Set Up a Github Account
 [Github](http:s//github.com) is a powerful site for version control and storing your code on a server. You all need to create free accounts in order to complete the lab work for this course. Go to Github, and fill out the form to create a username and click signup. It will ask you to verify your email address.
 
-##8. Set Up a .gitconfif File
+##8. Set Up a .gitconfig File
 a `.gitconfig` file is a file that automatically logs you in to git through terminal. This will be incredibly helpful later on. Lets make sure we're in the correct place before we create this file:
 `cd ~`. 
 
