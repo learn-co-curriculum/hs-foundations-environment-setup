@@ -91,7 +91,7 @@ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/lo
 ##12. RVM and Sublime Together
 To get RVM and Sublime to play nice, we need to do the following:
 ```
-open "$HOME/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build
+open "$HOME/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build"
 ```
 Once the file is open, you'll need to paste the below into the file:
 ```
