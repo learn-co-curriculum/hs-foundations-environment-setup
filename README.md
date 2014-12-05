@@ -203,7 +203,6 @@ Once downloading is complete, you'll want to enter `brew doctor` to make sure yo
 ##4. Let's make sure we have the correct and most updated version of Git.
 To see what your current version is, enter `git version`
 To update our version, we enter `brew install git`
-Once the download is complete, you'll want to open a new terminal tab, and reenter `git version` to compare and see if we have a new version number.
 
 ##5. Installing RVM
 RVM stands for Ruby Version Manager. Programming languages, just like software, has newer and older versions. RVM allows you to have multiple versions of ruby installed on your computer that you can easily switch back and forth between. 
@@ -229,7 +228,7 @@ brew install bash-completion
 
 ###7. Set Up a .gitconfig File
 
-a .gitconfig file is a file that automatically logs you in to git through terminal. This will be incredibly helpful later on. 
+a `.gitconfig` file is a file that automatically logs you in to git through terminal. This will be incredibly helpful later on. 
 
 * Make sure you're in the correct place before we create this file: `cd ~`.
 
