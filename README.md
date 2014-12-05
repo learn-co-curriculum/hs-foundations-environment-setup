@@ -179,22 +179,24 @@ function extract () {
   alias gba="git branch -a"
   alias gcam="git commit -am"
   alias gbb="git branch -b"
-  
-
-  # Sublime Text 2
-  alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl' 
 
 
 # Case-Insensitive Auto Completion
-bind "set completion-ignore-case on" 
-```
+  bind "set completion-ignore-case on" 
 
-Now open a new tab in your terminal (press command T), you'll see a brand new prompt!
+# Final Configurations and Plugins
+# =====================
+  # Git Bash Completion
+  # Will activate bash git completion if installed
+  # via homebrew
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+  fi
 
-##3. Download Homebrew 
-Homebrew(http://brew.sh/.). is an awesome package manager, and makes downloading lots of software really easy. Download Homebrew by entering 
-```
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  # RVM
+  # Mandatory loading of RVM into the shell
+  # This must be the last line of your bash_profile always
+  [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 ```
 Once downloading is complete, you'll want to enter `brew doctor` to make sure you don't have any conflicts.
 
