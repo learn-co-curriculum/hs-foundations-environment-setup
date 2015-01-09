@@ -198,6 +198,13 @@ function extract () {
   # This must be the last line of your bash_profile always
   [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 ```
+
+##3. Download Homebrew 
+[Homebrew](http://brew.sh/.). is an awesome package manager, and makes downloading lots of software really easy. Download Homebrew by entering 
+```
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+```
+
 Once downloading is complete, you'll want to enter `brew doctor` to make sure you don't have any conflicts.
 
 ##4. Let's make sure we have the correct and most updated version of Git.
