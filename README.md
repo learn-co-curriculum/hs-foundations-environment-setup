@@ -270,13 +270,13 @@ A .gitignore file basically tells Github to not keep track of certain files.
 ##9. Set Up a Sublime Sym Link
 This means that instead of typing `open` to open files, you can type `subl` and it will open that file in Sublime Text. Programmers love shortcuts and this one is super helpful.
 ```
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
 ```
 
 ##11. RVM and Sublime Together
 To get RVM and Sublime to play nice, we need to do the following:
 ```
-open "$HOME/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.sublime-build"
+open "$HOME/Library/Application Support/Sublime Text/Packages/Ruby/Ruby.sublime-build"
 ```
 Once the file is open, you'll need to paste the below into the file:
 ```
