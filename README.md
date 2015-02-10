@@ -217,12 +217,10 @@ RVM stands for Ruby Version Manager. Programming languages, just like software, 
 ```
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 
-\curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.0
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
-This command will install the latest version as ruby, as well as the newest stable version, which here is 2.2.0.
-
-Now, we want to make 2.2.0 our default version. Enter `rvm use 2.2.0 --default`. If you open a new tab and then type `ruby -v`, you should see 2.2.0
+This command will install the latest stable version of ruby. Type `ruby -v` in your terminal to make sure ruby installed properly. You should see `ruby 2.2.0` or later.
 
 If you have issues with Homebrew, You can try reinstalling it with this command:
 ```
