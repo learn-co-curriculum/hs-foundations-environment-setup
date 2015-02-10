@@ -215,12 +215,14 @@ To update our version, we enter `brew install git`
 RVM stands for Ruby Version Manager. Programming languages, just like software, has newer and older versions. RVM allows you to have multiple versions of ruby installed on your computer that you can easily switch back and forth between. 
 
 ```
-\curl -L https://get.rvm.io | bash -s stable --ruby=2.1.0
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+\curl -sSL https://get.rvm.io | bash -s stable --ruby=2.2.0
 ```
 
-This command will install the latest version as ruby, as well as the newest stable version, which here is 2.1.0.
+This command will install the latest version as ruby, as well as the newest stable version, which here is 2.2.0.
 
-Now, we want to make 2.1.0 our default version. Enter `rvm use 2.1.0 --default`. If you open a new tab and then type `ruby -v`, you should see 2.1.0
+Now, we want to make 2.2.0 our default version. Enter `rvm use 2.2.0 --default`. If you open a new tab and then type `ruby -v`, you should see 2.2.0
 
 If you have issues with Homebrew, You can try reinstalling it with this command:
 ```
