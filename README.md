@@ -52,9 +52,7 @@ We're going to use the standard for ours. Copy and paste this code below into yo
     # NODE_PATH
     export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
-    # Those NODE & Python Paths won't break anything even if you
-    # don't have NODE or Python installed. Eventually you will and
-    # then you don't have to update your bash_profile
+    # This NODE path won't break anything even if you don't have NODE installed. 
 
   # Configurations
 
@@ -78,28 +76,14 @@ We're going to use the standard for ours. Copy and paste this code below into yo
 
     # Hint: You can interpolate a variable into a string by using the $VARIABLE notation as below.
 
-    # We build our final PATH by combining the variables defined above
-    # along with any previous values in the PATH variable.
-
     # Our PATH variable is special and very important. Whenever we type a command into our shell,
     # it will try to find that command within a directory that is defined in our PATH.
-    # Read http://blog.seldomatt.com/blog/2012/10/08/bash-and-the-one-true-path/ for more on that.
     export PATH="$USR_PATHS:$PATH"
 
     # If you go into your shell and type: $PATH you will see the output of your current path.
 
 # Helpful Functions
 # =====================
-
-# A function to CD into the desktop from anywhere
-# so you just type desktop.
-# HINT: It uses the built in USER variable to know your OS X username
-
-# USE: desktop
-#      desktop subfolder
-function desktop {
-  cd /Users/$USER/Desktop/$@
-}
 
 # A function to easily grep for a matching process
 # USE: psg postgres
@@ -137,19 +121,6 @@ function extract () {
   # LS
   alias l='ls -lah'
 
-  # Git
-  alias gst="git status"
-  alias gl="git pull"
-  alias gp="git push"
-  alias gd="git diff | mate"
-  alias gc="git commit -v"
-  alias gca="git commit -v -a"
-  alias gb="git branch"
-  alias gba="git branch -a"
-  alias gcam="git commit -am"
-  alias gbb="git branch -b"
-
-
 # Case-Insensitive Auto Completion
   bind "set completion-ignore-case on" 
 
@@ -177,9 +148,14 @@ function extract () {
 
 Once downloading is complete, you'll want to enter `brew doctor` to make sure you don't have any conflicts.
 
-##3. Let's make sure we have the correct and most updated version of Git.
+##3. Get the Most Updated Version of Git.
 
 Update your version of git by entering `brew install git`
+
+If you have issues with Homebrew, You can try reinstalling it with this command:
+```
+\curl -L https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh | bash
+```
 
 ##4. Installing RVM
 
@@ -192,11 +168,6 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 ```
 
 This command will install the latest stable version of ruby. Type `ruby -v` in your terminal to make sure ruby installed properly. You should see `ruby 2.2.0` or later.
-
-If you have issues with Homebrew, You can try reinstalling it with this command:
-```
-\curl -L https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh | bash
-```
 
 ##5. Set Up a Sublime Sym Link
 
