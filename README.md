@@ -4,14 +4,9 @@ languages: ruby
 ---
 
 ## Environment Setup for Students Using Mac Computers
-Let's go ahead and get your environment setup. Don't worry too much about the how's and why's of all of this. No one sets up a programming environment all the time, so a lot of people are confused about this anyway. Our goal is to get you up and running as fast as possible!
+Let's go ahead and get your environment setup. Don't worry too much about the how's and why's of all of this. Our goal is to get you up and running as fast as possible!
 
-##1. Set Up a Github Account
-[Github](http:s//github.com) is a powerful site for version control and storing your code on a server. You all need to create free accounts in order to complete the lab work for this course. Go to Github, and fill out the form to create a username and click signup. You will need to then check your email to verify your new account by clicking a link in an email.
-
-##2. Let's set up our `.bash_profile`.
-
-###Set Up Your Bash Profile
+##1. Set Up Your `.bash_profile`.
 
 We'll spend a lot more time in terminal today, but it's helpful if your `.bash_profile` looks just like mine. We're going to open terminal and enter the following commands:
 
@@ -29,10 +24,6 @@ We're going to use the standard for ours. Copy and paste this code below into yo
 # Configuring Our Prompt
 # ======================
 
-  # if you install git via homebrew, or install the bash autocompletion via homebrew, you get __git_ps1 which you can use in the PS1
-  # to display the git branch.  it's supposedly a bit faster and cleaner than manually parsing through sed. i dont' know if you care 
-  # enough to change it
-
   # This function is called in your prompt to output your active git branch.
   function parse_git_branch {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -44,22 +35,12 @@ We're going to use the standard for ours. Copy and paste this code below into yo
     local         RED="\[\033[0;31m\]" # This syntax is some weird bash color thing I never
     local   LIGHT_RED="\[\033[1;31m\]" # really understood
     local        CHAR="♥"
-    # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
     export PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]]$RED\$(parse_git_branch) \[\e[32m\]\W\[\e[0m\]\n\[\e[0;31m\]$CHAR \[\e[0m\]"
       PS2='> '
       PS4='+ '
     }
-
-  # Finally call the function and our prompt is all pretty
-  prompt
-
-  # For more prompt coolness, check out Halloween Bash:
-  # http://xta.github.io/HalloweenBash/
-
-  # If you break your prompt, just delete the last thing you did.
-  # And that's why it's good to keep your dotfiles in git too.
 
 # Environment Variables
 # =====================
@@ -69,7 +50,6 @@ We're going to use the standard for ours. Copy and paste this code below into yo
   # instead of a hardcoded path.
 
     # NODE_PATH
-    # Node Path from Homebrew I believe
     export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
     # Those NODE & Python Paths won't break anything even if you
@@ -92,17 +72,8 @@ We're going to use the standard for ours. Copy and paste this code below into yo
 
   # Paths
 
-    # The USR_PATHS variable will just store all relevant /usr paths for easier usage
+    # The USR_PATHS variable will store all relevant /usr paths for easier usage
     # Each path is seperate via a : and we always use absolute paths.
-
-    # A bit about the /usr directory
-    # The /usr directory is a convention from linux that creates a common place to put
-    # files and executables that the entire system needs access too. It tries to be user
-    # independent, so whichever user is logged in should have permissions to the /usr directory.
-    # We call that /usr/local. Within /usr/local, there is a bin directory for actually
-    # storing the binaries (programs) that our system would want.
-    # Also, Homebrew adopts this convetion so things installed via Homebrew
-    # get symlinked into /usr/local
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
 
     # Hint: You can interpolate a variable into a string by using the $VARIABLE notation as below.
@@ -116,8 +87,6 @@ We're going to use the standard for ours. Copy and paste this code below into yo
     export PATH="$USR_PATHS:$PATH"
 
     # If you go into your shell and type: $PATH you will see the output of your current path.
-    # For example, mine is:
-    # /Users/avi/.rvm/gems/ruby-1.9.3-p392/bin:/Users/avi/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/avi/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/avi/.rvm/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/local/mysql/bin:/usr/local/share/python:/bin:/usr/sbin:/sbin:
 
 # Helpful Functions
 # =====================
@@ -199,19 +168,21 @@ function extract () {
   [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 ```
 
-##3. Download Homebrew 
+##2. Download Homebrew 
+
 [Homebrew](http://brew.sh/.). is an awesome package manager, and makes downloading lots of software really easy. Download Homebrew by entering 
 ```
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Once downloading is complete, you'll want to enter `brew doctor` to make sure you don't have any conflicts.
 
-##4. Let's make sure we have the correct and most updated version of Git.
-To see what your current version is, enter `git version`
-To update our version, we enter `brew install git`
+##3. Let's make sure we have the correct and most updated version of Git.
 
-##5. Installing RVM
+Update your version of git by entering `brew install git`
+
+##4. Installing RVM
+
 RVM stands for Ruby Version Manager. Programming languages, just like software, has newer and older versions. RVM allows you to have multiple versions of ruby installed on your computer that you can easily switch back and forth between. 
 
 ```
@@ -227,67 +198,18 @@ If you have issues with Homebrew, You can try reinstalling it with this command:
 \curl -L https://gist.github.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh | bash
 ```
 
-##6. Git Tab Autocompletion
-This is a super handy shortcut, we'll explain how this works more in depth, but git can autocomplete words for you. 
-```
-brew install bash-completion
-```
+##5. Set Up a Sublime Sym Link
 
-###7. Set Up a .gitconfig File
-
-a `.gitconfig` file is a file that automatically logs you in to git through terminal. This will be incredibly helpful later on. 
-
-* Make sure you're in the correct place before we create this file: `cd ~`.
-
-* Enter `touch .gitconfig` then `open .gitconfig` 
-
-* Copy and paste the [Flatiron School Gitconfig](https://github.com/flatiron-school/dotfiles/blob/master/hs-gitconfig) into this file
-
-* You're going to need to replace some values with your own information from Github including:
-
-  * the email address that you used to register for github, where you see `<GITHUB EMAIL ADDRESS>`. You'll be replacing the whole thing, you don't want any of the < > angle brackets around the things you replace.
-
-  * Your github username and API token. This is how you find and generate API tokens on github.com:
-
-    * On https://github.com/settings/applications, next to "Personal access tokens" you should see a button for "Generate new token". Click on it. 
-    * Under "Token description" enter 'flatiron-school', then click the green "Generate token" button. 
-    * Once the screen refreshes you'll see a token (a series of randomly generated letters and numbers). Copy that and paste it into your .gitconfig file, replacing `<API token>`. (It's in a couple of places.) 
-
-* Now scroll all the way to the top of the file and replace the text <YOUR_HOME_DIRECTORY> with the name of your computer user. You can type `pwd` in terminal to see your computer username and figure out what you need to type in.
-
-* Finally, you don't want any of the < > angle brackets around the things you replaced, like your email, username, or tokens, so make sure you replaced everything properly.
-
-##8. Set Up a Gitignore
-A .gitignore file basically tells Github to not keep track of certain files.
-
-* Make sure you are in the home directory. You should see this `~` in your command line. 
-
-* Enter `touch .gitignore` then `open .gitignore`
-
-* Copy and paste [Flatiron School's Gitignore](https://github.com/flatiron-school/dotfiles/blob/master/gitignore).
-
-
-##9. Set Up a Sublime Sym Link
 This means that instead of typing `open` to open files, you can type `subl` and it will open that file in Sublime Text. Programmers love shortcuts and this one is super helpful.
+
+#### For Sublime Text 2
+```
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin
+```
+
+#### For Sublime Text 3
 ```
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
-```
-
-##11. RVM and Sublime Together
-To get RVM and Sublime to play nice, we need to do the following:
-```
-open "$HOME/Library/Application Support/Sublime Text/Packages/Ruby/Ruby.sublime-build"
-```
-Once the file is open, you'll need to paste the below into the file:
-```
-{
-  "env":{
-      "PATH":"${HOME}/.rvm/bin:${PATH}"
-  },
-  "cmd": ["rvm-auto-ruby", "$file"],
-  "file_regex": "^(...*?):([0-9]*):?([0-9]*)",
-  "selector": "source.ruby"
-} 
 ```
 
 ## Congrats! 
