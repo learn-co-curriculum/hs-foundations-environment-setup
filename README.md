@@ -36,16 +36,12 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 This command will install the latest stable version of ruby. Type `ruby -v` in your terminal to make sure ruby installed properly. You should see `ruby 2.2.0` or later.
 
-##4. Set Up a Sublime Sym Link
+##4. Download Sublime Text and Set Up a Sublime Sym Link
 
-This means that instead of typing `open` to open files, you can type `subl` and it will open that file in Sublime Text. Programmers love shortcuts and this one is super helpful.
+Download Sublime Text [here](http://www.sublimetext.com/3).
 
-#### For Sublime Text 2
-```
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin
-```
+Then run the code below in your terminal. This means that instead of typing `open` to open files, you can type `subl` and it will open that file in Sublime Text. Programmers love shortcuts and this one is super helpful.
 
-#### For Sublime Text 3
 ```
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
 ```
