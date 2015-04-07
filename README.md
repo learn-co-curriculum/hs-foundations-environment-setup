@@ -46,7 +46,26 @@ Then run the code below in your terminal. This means that instead of typing `ope
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin
 ```
 
-##5. Set Up Your `.bash_profile`.
+##5. Download The Learn Gem
+
+Now that we have RVM and SublimeText installed, let's install our first gem.
+
+This gem isn't open-sourced, so we won't be downloading it from [RubyGems.org](https://rubygems.org/), which is where most gems are hosted. Before we download it, we will need to specify where it's coming from, which is a private server at Flatiron. Type this into your command line;
+
+`gem sources -a http://flatiron:33west26@gems.flatironschool.com/`
+
+Next, download the gem:
+
+`gem install learn-co`
+
+The learn gem will allow us to run the tests for challenges and labs - to see if your code is working properly. It's based off of [RSpec](https://www.relishapp.com/rspec), a popular testing framework in Ruby, but it does a bit more like help track your progress on labs.
+
+Go ahead and install RSpec too: `gem install rspec`
+
+Normally when we run our tests, we would type `rspec`, but to run the tests for challenges and labs, you'll type `learn` into your command line instead, within the root directory of the challenge/lab.
+
+
+##6. Set Up Your `.bash_profile`.
 
 We'll spend a lot more time in terminal today, but it's helpful if your `.bash_profile` looks just like mine. We're going to open terminal and enter the following commands:
 
