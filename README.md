@@ -8,7 +8,7 @@ Let's go ahead and get your environment setup. Don't worry too much about the ho
 
 ##1. Download Homebrew
 
-[Homebrew](http://brew.sh/.). is an awesome package manager, and makes downloading lots of software really easy. Download Homebrew by entering
+[Homebrew](http://brew.sh/.) is an awesome package manager, and makes downloading lots of software really easy. Download Homebrew by entering
 ```
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
