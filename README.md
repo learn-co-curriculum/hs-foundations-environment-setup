@@ -1,7 +1,4 @@
----
-tags: setup, environment, bash, kids
-languages: ruby
----
+
 
 ## Environment Setup for Students Using Mac Computers
 Let's go ahead and get your environment setup. Don't worry too much about the how's and why's of all of this. Our goal is to get you up and running as fast as possible!
