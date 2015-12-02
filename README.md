@@ -261,3 +261,5 @@ Phew! That was a lot of work, but now you are all set to use git and github.
 
 
 
+
+<a href='https://learn.co/lessons/hs-foundations-environment-setup' data-visibility='hidden'>View this lesson on Learn.co</a>
